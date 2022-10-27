@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
+/* End Fonts */
+/* Start Global rules */
+*,
+*::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.main{
+    margin: auto;
+    background-image: linear-gradient(to left, rgba(255,255,255), rgba(255,255,255));
+    overflow: hidden;
+    padding: .7em;
+    border-radius: 1em;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.main_figure{
+    background-color: #e69244;
+}
+.main_img{
+    width: 100%;
+}
+
+.html {
+        font-family: 'Roboto', sans-serif;
+        font-size: 10px;
+        color: #000;
+        scroll-behavior: smooth;
+    }
+
+body{
+
+}
+
+.conte_parent{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  
+}
+.conte{
+    height: 510px;
+    width: 350px;
+    box-shadow:0 0 10px #e69244;
+    margin: 30px 20px;
+    border: 1.5px solid rgb(188, 198, 201);
+}
+.conte .card{
+    height: 200px;
+    width: 100%;
+    margin-bottom: 170px;
+}
+.card img{
+    margin: auto;
+    display: block;
+}
+.conte .serumJoseon img{
+    height: 100px;
+    width: 150px;
+}
+
+.conte .cosrx img{
+    height: 350px;
+    width: 330px;
+}
+.conte .ordinaryNiacinamida img{
+    height: 330px;
+    width: 300px;
+}
+.informacion{
+    height: 50px;
+    width: 100%;
+}
+.informacion h1{
+    font-family: sans-serif;
+    font-size: 1.7rem;
+    text-align: center;
+    color: #333;
+    margin-bottom: -10px;
+}
+.precio {
+    height:50px;
+    width: 85%;
+    margin: auto;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.box-precio{
+    width: 80px;
+}
+ .precio1{
+    color: #e69244;
+    font-size: 1.5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.precio .precio2{
+    font-size: 1.5em;
+}
+.shoping{
+    font-size: 1.3rem;
+    color: #555;
+}
+/*footer*/
+footer {
+    padding: 4.9rem 0;
+    background-color: #ee99a9;
+    background-size: 25%;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    position: relative;
+}
+.footer-content {
+    overflow: hidden;
+}
+
+.footer-content h4 {
+    font-size: 1.9rem;
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 3px;
+    margin-bottom: 3rem;
+}
+.footer-content .circle{
+    margin: 2.4rem 0;
+}
+
+.footer-content-about {
+    margin-bottom: 4rem;
+}
+
+.footer-content-about p {
+    line-height: 2;
+}
+
+.social-icons {
+    list-style: none;
+    margin-bottom: 5.4rem;
+    display: flex;
+    justify-content: center;
+}
+.social-icons i {
+    font-size: 2rem;
+    color: #db7a1f;
+    padding: .8rem 2rem;
+    
+}
+
+.social-icons i:hover,
+.social-icons i:focus {
+    color: #ffffff;
+}
+
+.news-form {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+}
+.news-input {
+    width: 100%;
+    max-width: 25rem;
+    padding: 1rem;
+    border-radius: .4rem;
+}
+.news-btn {
+    background: transparent;
+    border: none;
+    color: #252525;
+    cursor: pointer;
+    font-size: 1.6rem;
+    padding: 1px .6rem;
+    position: absolute;
+    top: 30%;
+    margin-left: 20.5rem;
+}
+
+@media screen and (min-width: 900px) {
+
+section {
+    padding: 3rem;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.nav {
+    justify-content: space-between;
+ }
+
+.nav-list {
+    position: initial;
+    width: initial;
+    height: initial;
+    background-color: transparent;
+    padding: 0;
+    justify-content: initial;
+    flex-direction: row;
+    transform: initial;
+    transition: initial;
+}
+}
