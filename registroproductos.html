@@ -29,13 +29,10 @@
                 <a href="index.php" class="nav-link active">Home</a>
             </li>
             <li class="nav-item">
-                <a href="login.html" class="nav-link active">Iniciar Sesión</a>
-            </li>
-            <li class="nav-item">
                 <a href="#acerca de" class="nav-link ">Sobre nosotros</a>
             </li>
             <li class="nav-item">
-                <a href="productos.html" class="nav-link ">Productos</a>
+                <a href="#productos" class="nav-link ">Productos</a>
             </li>
             <li class="nav-item">
                 <a href="registro.html" class="nav-link ">Registro</a>
@@ -46,7 +43,7 @@
 </header>
  
   
-  <form action="registro.php" method="post" class="form">
+  <form action="registroproductos.php" method="post" class="form">
     <div>  
       <section class="main">
         <figure class="main_figure">
@@ -54,36 +51,39 @@
         </figure>
     <div class="main_contact">
       <h2 class="main_title">Hola</h2>
-      <p class="main_paragraph">¡Bienvenido! Ingrese los siguientes datos: </p>
+      <p class="main_paragraph">¡Bienvenido! registre un nuevo producto: </p>
     </div>
     <div>
     <label for="nombre">Nombre:</label>
-      <input class="box" type="text" name="nombre" id="nombre" required placeholder="Ingrese un nombre" />
+      <input class="box" type="text" name="nombre" id="nombre" required placeholder="Nombre del producto" />
     </div>
     <div>
-      <label for="apellido">Apellido:</label>
-      <input class="box" type="text" name="apellido" id="apellido" required placeholder="Ingrese un apellido" />
+      <label for="producto">Producto:</label>
+      <input class="box" type="text" name="producto" id="producto" required placeholder="Tipo de producto" />
     </div>
     <div>
-      <label for="direccion">Direccion</label>
-      <input class="box" type="text" name="direccion" id="direccion" required placeholder="Ingrese una direccion" />
+      <label for="marca">Marca: </label>
+      <input class="box" type="text" name="marca" id="marca" required placeholder="Marca del producto" />
     </div>
     <div>
-      <label for="telefono">Teléfono: </label>
-      <input class="box" type="tel" name="telefono" id="telefono" required placeholder="Ingrese un teléfono" />
+      <label for="tipo_piel">Tipo de piel: </label>
+      <input class="box" type="text" name="tipo_piel" id="tipo_piel" required placeholder="Tipo de piel" />
     </div>
     <div>
-      <label for="sexo">Sexo: </label>
-      <input class="box" type="text" name="sexo" id="sexo" required placeholder="Ingrese el sexo" />
+      <label for="afeccion">Afeccion: </label>
+      <input class="box" type="text" name="afeccion" id="afeccion" required placeholder="Afeccion" />
     </div>
     <div>
-      <label for="correo">Email:</label>
-      <input class="box" type="email" name="correo" id="correo" required placeholder="Ingrese un email" />
+      <label for="descripcion">Descripcion:</label>
+      <input class="box" type="text" name="descripcion" id="descripcion" required placeholder="Descripcion del producto" />
     </div>
     <div>
-      <label for="contrasena">Contraseña:</label>
-      <input class="box" type="password" name="contrasena" id="contrasena" required placeholder="Ingrese una contraseña" />
+      <label for="precio">Precio:</label>
+      <input class="box" type="text" name="precio" id="precio" required placeholder="Precio del producto" />
     </div>
+    <label for="foto">Foto:</label>
+    <input class="box" type="text" name="foto" id="foto" required  />
+  </div>
     
     <button class="btn" type="submit" name="registrar" id="registrar">Registrar</button>
   </div>

@@ -47,7 +47,7 @@
                        
                             if($type==1){
                                 echo'<li class="nav-item">
-                                <a href="#productos" class="nav-link ">Administracion</a>
+                                <a href="registroproductos.html" class="nav-link ">Administracion de productos</a>
                             </li>'; 
                             }
                             if ($type==0){
