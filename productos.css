@@ -36,10 +36,6 @@
         scroll-behavior: smooth;
     }
 
-body{
-
-}
-
 .conte_parent{
   display:flex;
   justify-content:space-between;

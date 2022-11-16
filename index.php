@@ -47,12 +47,12 @@
                        
                             if($type==1){
                                 echo'<li class="nav-item">
-                                <a href="registroproductos.html" class="nav-link ">Administracion de productos</a>
+                                <a href="panel.php" class="nav-link ">Panel de administrador</a>
                             </li>'; 
                             }
                             if ($type==0){
                                 echo'<li class="nav-item">
-                        <a href="productos.html" class="nav-link ">Productos</a>
+                        <a href="productos.html" class="nav-link ">Productos en tienda</a>
                     </li>';
                             }
                             echo'<li class="nav-item">

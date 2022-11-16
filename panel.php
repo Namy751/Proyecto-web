@@ -1,19 +1,28 @@
+<?php
+
+include("conexion.php");
+$con=conectar();
+
+$sql="SELECT * FROM products";
+$query=mysqli_query($con,$sql);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="Stylesheet"href="registro.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-  <link rel="stylesheet" href="estilos.css" />
-  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="Stylesheet"href="estilos.css"/>
+    <link rel="Stylesheet"href="registro.css"/>
+    <link rel="Stylesheet"href="panel.css"/>
 
- 
-  <title>SUNSET:Registro</title>
+    <title>Panel de administrador</title>
 </head>
 <body>
-    <div class="loguito">
+    
+<div class="loguito">
         <a href="index.php"><img src="./images/fondo sun.jpg" alt=""></a>
 </div>
   <header>
@@ -29,23 +38,18 @@
                 <a href="index.php" class="nav-link active">Home</a>
             </li>
             <li class="nav-item">
+                <a href="#acerca de" class="nav-link ">Sobre nosotros</a>
+            </li>
+            <li class="nav-item">
                 <a href="productos.html" class="nav-link ">Productos en tienda</a>
             </li>
             <li class="nav-item">
                 <a href="panel.php" class="nav-link ">Panel de productos</a>
             </li>
-            <li class="nav-item">
-              <a href="cerrar-sesion.php" class="nav-link ">Cerrar sesion</a>
-          </li>
-          
-           
-           </ul>
-        </nav>
     </div>
 </header>
- 
-  
-  <form action="registroproductos.php" method="post" class="form">
+
+<form action="registroproductos.php" method="post" class="form">
     <div>  
       <section class="main">
         <figure class="main_figure">
@@ -91,32 +95,59 @@
   </div>
   </form>
 </section>
+
+        <div class="container">   
+                <table>
+                    <thead>
+                    <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Producto</th>
+                                <th>Marca</th>
+                                <th>Tipo_piel</th>
+                                <th>Afeccion</th>
+                                <th>Descripcion</th>
+                                <th>Precio</th>
+                                <th>Foto</th>
+                                <th></th>
+                                <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                         <?php
+                             while($row=mysqli_fetch_array($query)){
+                         ?>
+                        
+                        <tr>
+                            <td><?php echo $row['id']?></td>
+                            <td><?php echo $row['nombre']?></td>
+                            <td><?php echo $row['producto']?></td>
+                            <td><?php echo $row['marca']?></td>
+                            <td><?php echo $row['tipo_piel']?></td>
+                            <td><?php echo $row['afeccion']?></td>
+                            <td><?php echo $row['descripcion']?></td>
+                            <td><?php echo $row['precio']?></td>
+                            <td><img src="<?php echo $row['foto']?>"width="80px" height="70px"></td>
+
+                        
+                        <td><a href="actualizar.php?id=<?php echo $row['id'] ?>" class="btn">Editar</a></td>
+                        <td><a href="delete.php?id=<?php echo $row['id']?>" class="btn">Eliminar</a></td>
+                        </tr>
+                        <?php
+                             }
+                         ?>
+                    </tbody>
+                </table>
+        </div>
+
+
 <footer>
   <div class="container">
       <div class="footer-content">
           <div class="footer-content-about">
              </div>
           <div class="footer-div">
-              <div class="social-media">
-                  <h4>Siguenos en nuestras redes!</h4>
-                  <ul class="social-icons">
-                      <li>
-                          <a href="#"><i class="fab fa-twitter"></i></a>
-                      </li>
-                      <li>
-                          <a href="#"><i class="fab fa-facebook-square"></i></a>
-                      </li>
-                      <li>
-                          <a href="#"><i class="fab fa-pinterest"></i></a>
-                      </li>
-                      <li>
-                          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                      </li>
-                      <li>
-                          <a href="#"><i class="fab fa-tripadvisor"></i></a>
-                      </li>
-                  </ul>
-              </div>
+              
               <div>
                   <h4>Noticias</h4>
                   <form action="" class="news-form">
@@ -130,6 +161,9 @@
           </div>
       </div>
   </div>
+
+
+
 </footer>
   <script>
 
